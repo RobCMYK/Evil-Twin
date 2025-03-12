@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNA Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <style>
+        body {
+            font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            color: #000000;
+            font-weight: normal;
+            font-family: "Segoe UI" , "Segoe" , "SegoeUI-Regular-final", Tahoma, Helvetica, Arial, sans-serif;
+            font-size: 0.9em;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+            position: relative;
+            width: 500px;
+            height: 100%;
+            overflow: auto;
+            background-color: #ffffff;
+            margin-left: -500px;
+            margin-right: 0px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            font-weight: lighter;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .input-box, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #BABABA;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .input-box:focus, select:focus {
+            border: 1px solid #6B6B6B;
+            outline: none;
+        }
+        .btn {
+            background-color: rgb(38, 114, 236);
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 20%;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: rgb(212, 227, 251);
+            color: black;
+        }
+        .footer {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h1>University of North Alabama<br>Production Systems Access</h1>
+        <p>Please enter your UNA username and password</p>
+        <form action='/login' method='post'>
+            <label for='username'>UNA Portal Email:</label>
+            <input type='text' id='username' name='username' placeholder='UNAPortal Username' required pattern='[^@]+@[^@]+\\.[a-zA-Z]{2,}\'>
+            <label for='password'>Password:</label>
+            <input type='password' id='password' name='password' placeholder='Password' minlength='4' required>
+            <button type='submit' class='btn'>Sign in</button>
+            <br>
+            <br>
+            <p>By accessing this system, you are agreeing to all policies governing the University of North Alabama's (UNA's) systems. Current policies can be viewed here. Unauthorized users should disconnect immediately.</p>
+            <br>
+            <br>
+            <p>When finished, please log out of all systems AND close all browsers to help ensure a complete disconnect and that no other users may access your accounts.</p>
+        </form>
+        <p class='footer'>&copy; 2025 University of North Alabama | <a href='#'>Home</a> | <a href='#'>Help</a></p>
+    </div>
+</body>
+</html>
